@@ -129,3 +129,54 @@
   .dark-theme .result-link:hover {
     color: #90caf9;
   }
+
+  /* Loading Animation */
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+}
+
+.wrapper .loader {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 20px;
+}
+
+.loader .loading {
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin: 0 10px;
+    animation: load 0.08s ease infinite;
+}
+
+.loader .loading.one {
+    animation-delay: 0.06s;
+}
+
+.loader .loading.two {
+    animation-delay: 0.08s;
+}
+
+.loader .loading.three {
+    animation-delay: 0.09s;
+}
+
+.loader .loading.four {
+    animation-delay: 0.12s;
+}
+
+@keyframes load {
+    0% {
+        width: 30px;
+        height: 30px;
+    }
+    50% {
+        width: 20px;
+        height: 20px;
+    }
+}

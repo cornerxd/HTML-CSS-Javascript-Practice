@@ -55,9 +55,17 @@ searchForm.addEventListener('submit', async (e) => {
         return;
     }
 
-    searchResults.innerHTML = "<div class='spinner'>Loading ...</div>";
+    // searchResults.innerHTML = "<div class='spinner'>Loading ...</div>";
+    searchResults.innerHTML = "<section class='wrapper'><div class='loader'><div class='loading one'></div><div class='loading two'></div><div class='loading three'></div><div class='loading four'></div></div></section>";
 
     try {
+
+        var delayInMilliseconds = 10000; //1 second
+
+        setTimeout(function() {
+        //your code to be executed after 1 second
+        }, delayInMilliseconds);
+
         const search_results = await searchWikipedia(query);
 
         if (search_results.query.searchinfo.totalhits == 0) {
